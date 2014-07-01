@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" cache="false" prefHeight="683.0" prefWidth="1029.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="colositer.ColositerController">
+  <children>
+    <Button fx:id="saveButton" layoutX="808.0" layoutY="597.0" onAction="#saveImagesAction" prefWidth="144.0" text="Save Images" />
+    <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+    <ScrollPane fx:id="scrollPane" layoutX="14.0" layoutY="33.0" prefHeight="455.0" prefWidth="969.0">
+      <content>
+        <VBox id="VBox" fx:id="vBox" alignment="CENTER" spacing="5.0" />
+      </content>
+    </ScrollPane>
+    <Slider fx:id="contrastSlider" blockIncrement="0.02" layoutX="105.0" layoutY="543.0" max="1.0" min="-1.0" prefWidth="183.0" showTickLabels="true" showTickMarks="true" snapToTicks="false" />
+    <Slider fx:id="hueSlider" blockIncrement="0.02" layoutX="105.0" layoutY="599.0" max="1.0" min="-1.0" prefWidth="183.0" showTickLabels="true" showTickMarks="true" />
+    <Slider fx:id="brightnessSlider" blockIncrement="0.02" layoutX="486.0" layoutY="542.0" max="1.0" min="-1.0" prefWidth="183.0" showTickLabels="true" showTickMarks="true" snapToTicks="false" />
+    <TextField fx:id="contrastTextField" layoutX="301.0" layoutY="544.0" prefWidth="56.0" />
+    <Slider fx:id="saturationSlider" blockIncrement="0.02" layoutX="486.0" layoutY="593.0" max="1.0" min="-1.0" prefWidth="183.0" showTickLabels="true" showTickMarks="true" />
+    <TextField fx:id="hueTextField" layoutX="301.0" layoutY="601.0" prefWidth="56.0" />
+    <Label labelFor="$label" layoutX="27.0" layoutY="538.0" text="Контраст" />
+    <Label layoutX="42.0" layoutY="610.0" text="(Hue)" />
+    <TextField fx:id="projectName" layoutX="808.0" layoutY="571.0" prefWidth="144.0" promptText="Project Name" text="recolorProject" />
+    <TextField fx:id="brightnessTextField" layoutX="684.0" layoutY="542.0" prefWidth="56.0" />
+    <TextField fx:id="saturationTextField" layoutX="684.0" layoutY="598.0" prefWidth="56.0" />
+    <Label layoutX="398.0" layoutY="539.0" text="Яркость" />
+    <Separator layoutX="767.0" layoutY="483.0" opacity="0.58" orientation="VERTICAL" prefHeight="200.0" />
+    <Label layoutX="387.0" layoutY="610.0" text="(Saturation)" />
+    <Separator layoutX="365.0" layoutY="490.0" opacity="0.69" orientation="VERTICAL" prefHeight="200.0" />
+    <Button fx:id="loadImagesButton" layoutX="808.0" layoutY="547.0" mnemonicParsing="false" onAction="#loadImagesAction" prefWidth="144.0" text="Load Images" />
+    <Label layoutX="27.0" layoutY="557.0" text="(Contrast)" />
+    <Label layoutX="390.0" layoutY="557.0" text="(Brightness)" />
+    <Label layoutX="35.0" layoutY="590.0" text="Оттенок" />
+    <Label layoutX="374.0" layoutY="590.0" text="Насыщенность" />
+    <Button fx:id="loadEffect" layoutX="808.0" layoutY="521.0" mnemonicParsing="false" onAction="#loadEffectAction" prefWidth="144.0" text="Load ColorEffect" textOverrun="CLIP">
+      <tooltip>
+        <Tooltip text="Load Effect from previous projects" />
+      </tooltip>
+    </Button>
+    <Button fx:id="applyIM" layoutX="808.0" layoutY="623.0" mnemonicParsing="false" onAction="#onApplyIM" prefWidth="144.0" text="Apply ImageMagic" />
+    <TextField fx:id="lineIM" editable="false" layoutX="149.0" layoutY="648.0" prefWidth="765.0" promptText="ImageMagic command for good output quality" />
+    <Button fx:id="clearList" layoutX="808.0" layoutY="494.0" mnemonicParsing="false" onAction="#onClearList" prefWidth="144.0" text="Clear List" />
+    <CheckBox id="" fx:id="chkManualIM" layoutX="27.0" layoutY="505.0" mnemonicParsing="false" onAction="#onCheckManualIM" text="Manual ImageMagic" />
+    <Label layoutX="17.0" layoutY="651.0" text="convert &lt;image1&gt;" />
+    <Label layoutX="925.0" layoutY="651.0" text="&lt;image2&gt;" />
+  </children>
+</AnchorPane>
